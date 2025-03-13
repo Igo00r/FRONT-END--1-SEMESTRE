@@ -1,3 +1,3 @@
 # Aulas de FRONT-END-DESIGN-ENGINEERING
 
-Primeiro Semestre
+Primeiro Semestre de FRONT-END DESIGN ENGINEERING
