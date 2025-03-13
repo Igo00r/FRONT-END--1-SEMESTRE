@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let logadoSession = sessionStorage.getItem('logado');
+        let logadoLocal = localStorage.getItem('logado');
+        let nome = localStorage.getItem('nome');
+
+        if(!logadoSession && !logadoLocal){
+            localStorage.setItem('erro', '2');
+            window.location.href = 'formLogin.html';
+        }
+        function Logout(){
+           /*  localStorage.removeItem('logado');
+            localStorage.removeItem('nome');
+            localStorage.removeItem('erro'); */
+            sessionStorage.setItem('logado', 'false');
+            localStorage.setItem('nome', 'null');
+            localStorage.setItem('erro', '0');
+            localStorage.clear();
+
+            sessionStorage.clear();
+
+            window.location.href = 'formLogin.html';
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Perfil</h1>
+    <h2>Nome: <script>document.write(nome)</script></h2>
+    <button onclick="Logout()" type="button">Logout</button>
+</body>
+</html>
